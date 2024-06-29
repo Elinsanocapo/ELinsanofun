@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For students-Enter a Quizizz code</title>
+    <link rel="icon" type="image/png" href="https://cf.quizizz.com/img/quizizz_logos/q-logo-icon.png">
+    <meta name="theme-color" content="#000000" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="language" content="English" />
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <style>
+        .container {
+            position: relative;
+        }
+
+        .center-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Ajusta esto a la altura deseada */
+        }
+
+        .brillante {
+            color: white;
+            text-shadow: 0 0 10px white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+
+        iframe {
+            width: 100vw;
+            height: 100vh;
+            border: none; /* Esto quita el borde del iframe */
+        }
+
+        :root {
+            --bg: #19191a;
+            --font: "Montserrat", sans-serif;
+            --color-1: #3a027e;
+            --color-2: #c800ff;
+            --border-card: rgba(49, 49, 49, 1);
+            --card-background: rgb(83, 77, 77);
+            --accent: #8b3dff;
+        }
+
+        /* ---- reset ---- */
+        body {
+            font: normal 78% Arial, Helvetica, sans-serif;
+        }
+
+        #logo img {
+            width: 70px; /* Ajusta el tamaño del logo según tus necesidades */
+        }
+
+        .sidebar {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: 100%;
+            height: 80px;
+            z-index: 1;
+            border-radius: 15px;
+            background: rgba(105, 131, 118, 0.1);
+            backdrop-filter: blur(7px);
+            -webkit-backdrop-filter: blur(8px);
+            -moz-backdrop-filter: blur(8px);
+            -ms-backdrop-filter: blur(8px);
+            -webkit-box-shadow: 0 0 50px -5px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 0 0 50px -5px rgba(0, 0, 0, 0.75);
+            box-shadow: 0 0 50px -5px rgba(0, 0, 0, 0.75);
+            border: 1px solid rgba(0, 0, 0, 0.2);
+        }
+
+        .sidebar a {
+            color: #fff;
+            padding: 13px;
+            text-decoration: none;
+            box-sizing: border-box;
+            font-family: "Lato", sans-serif;
+            transition: all 0.5s ease;
+            z-index: 1;
+        }
+
+        .sidebar a.active {
+            color: #ffffff;
+            background: #a772ff;
+            border-radius: 10px;
+            z-index: 1;
+        }
+
+        .sidebar a span {
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            z-index: 1;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            background-color: #0b0b0b;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        /* SEARCH */
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .nav-active {
+            position: relative;
+            border: none;
+            border-radius: 3px;
+            padding: 10px 20px;
+            background-color: transparent;
+            color: #ffffff;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .nav-active::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0;
+            width: 50%;
+            height: 2px;
+            background-color: #fff;
+        }
+
+        .nav-active:hover {
+            background-color: #fff;
+        }
+
+        .nav-btn:hover {
+            background-color: #302f2f;
+        }
+
+        a {
+            margin-right: 10px;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: #161515;
+            color: #FFF;
+            font-family: Roboto, sans-serif;
+            font-weight: 400;
+            text-align: center;
+        }
+
+        /* Estilos para las cajas de juegos */
+        .games-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px; /* Espacio entre las cajas de juegos */
+            margin-top: 20px;
+        }
+
+        .box {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-out;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 150px; /* Ajusta la altura deseada para cada caja de juego */
+            width: calc(20% - 10px); /* Calcula el ancho de cada caja para tener 5 por fila */
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .box img {
+            max-width: 100%;
+            max-height: 100%;
+            vertical-align: middle;
+        }
+
+        .textover {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px;
+            box-sizing: border-box;
+            transform: translateY(100%);
+            transition: transform 0.3s ease-out;
+        }
+
+        .box:hover .textover {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sidebar">
+        <a href="/" id="">
+            <img src="" alt="">
+        </a>
+
+        <a href="./index.html" class="nav-btn"><span>Home</span></a>
+        <a href="./Games.html" class="nav-active"><span>Games</span></a>
+        <a href="Apps.html" class="nav-btn"><span>Apps</span></a>
+        <a href="Youtube.html" class="nav-btn"><span>Youtube-unblock</span></a>
+    </div>
+
+    <div class="games-container">
+        <!-- Ejemplo de caja de juego con imagen de prueba -->
+        <div class="box">
+            <a href="#">
+                <img class="ImageForGame" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSp-7WmGrclnPy4Y7vQMYkdkORBUeQcmyVigw&s" alt="game">
+                <div class="textover">Sample Game Title</div>
+            </a>
+        </div>
+
+        <!-- Agregar más cajas de juegos aquí -->
+        <div class="box">
+            <a href="#">
+                <img class="ImageForGame" src="https://via.placeholder.com/300x200.png?text=Sample+Game+Image" alt="game">
+                <div class="textover">Sample Game Title</div>
+            </a>
+        </div>
+
+        <div class="box">
+            <a href="#">
+                <img class="ImageForGame" src="https://via.placeholder.com/300x200.png?text=Sample+Game+Image" alt="game">
+                <div class="textover">Sample Game Title</div>
+            </a>
+        </div>
+
+        <div class="box">
+            <a href="#">
+                <img class="ImageForGame" src="https://via.placeholder.com/300x200.png?text=Sample+Game+Image" alt="game">
+                <div class="textover">Sample Game Title</div>
+            </a>
+        </div>
+
+        <div class="box">
+            <a href="#">
+                <img class="ImageForGame" src="https://via.placeholder.com/300x200.png?text=Sample+Game+Image" alt="game">
+                <div class="textover">Sample Game Title</div>
+            </a>
+        </div>
+
+        <div class="box">
+            <a href="#">
+                <img class="ImageForGame" src="https://via.placeholder.com/300x200.png?text=Sample+Game+Image" alt="game">
+                <div class="textover">Sample Game Title</div>
+            </a>
+        </div>
+
+        <div class="box">
+            <a href="#">
+                <img class="ImageForGame" src="https://via.placeholder.com/300x200.png?text=Sample+Game+Image" alt="game">
+                <div class="textover">Sample Game Title</div>
+            </a>
+        </div>
+
+        <div class="box">
+            <a href="#">
+                <img class="ImageForGame" src="https://via.placeholder.com/300x200.png?text=Sample+Game+Image" alt="game">
+                <div class="textover">Sample Game Title</div>
+            </a>
+        </div>
+
+        <div class="box">
+            <a href="#">
+                <img class="ImageForGame" src="https://via.placeholder.com/300x200.png?text=Sample+Game+Image" alt="game">
+                <div class="textover">Sample Game Title</div>
+            </a>
+        </div>
+
+        <!-- Puedes agregar más cajas de juego aquí -->
+    </div>
+
+</body>
+
+</html>
