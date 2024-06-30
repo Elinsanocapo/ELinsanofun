@@ -4,26 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>For students-Enter a Quizizz code</title>
-    <link rel="icon" type="image/png" href="https://cf.quizizz.com/img/quizizz_logos/q-logo-icon.png">
-    <meta name="theme-color" content="#000000" />
+<link rel="icon" type="image/png" href="https://cf.quizizz.com/img/quizizz_logos/q-logo-icon.png">
+
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="language" content="English" />
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-
+    
     <style>
         .container {
             position: relative;
         }
 
         .center-image {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh; /* Ajusta esto a la altura deseada */
-        }
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ajusta esto a la altura deseada */
+}
+        
         .brillante {
             color: white;
             text-shadow: 0 0 10px white;
@@ -33,271 +33,1366 @@
             transform: translate(-50%, -50%);
             z-index: 1;
         }
-
-        iframe {
+          iframe {
             width: 100vw;
             height: 100vh;
             border: none; /* Esto quita el borde del iframe */
         }
-
         :root {
-            --bg: #19191a;
-            --font: "Montserrat", sans-serif;
-            --color-1: #3a027e;
-            --color-2: #c800ff;
-            --border-card: rgba(49, 49, 49, 1);
-            --card-background: rgb(83, 77, 77);
-            --accent: #8b3dff;
-        }
+  --bg: #19191a;
+  --font: "Montserrat", sans-serif;
+  --color-1: #3a027e;
+  --color-2: #c800ff;
+  --border-card: rgba(49, 49, 49, 1);
+  --card-background: rgb(83, 77, 77);
+  --accent: #8b3dff;
+}
 
-        /* ---- reset ---- */
-        body {
-            font: normal 78% Arial, Helvetica, sans-serif;
-        }
+/* ---- reset ---- */
+body {
+  font: normal 78% Arial, Helvetica, sans-serif;
+}
 
-        #logo img {
-            width: 70px; /* Ajusta el tamaño del logo según tus necesidades */
-        }
+#logo img {
+  width: 70px; /* Ajusta el tamaño del logo según tus necesidades */
+}
 
-        .sidebar {
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            width: 100%;
-            height: 80px;
-            z-index: 1;
-            border-radius: 15px;
-            background: rgba(105, 131, 118, 0.1);
-            backdrop-filter: blur(7px);
-            -webkit-backdrop-filter: blur(8px);
-            -moz-backdrop-filter: blur(8px);
-            -ms-backdrop-filter: blur(8px);
-            -webkit-box-shadow: 0 0 50px -5px rgba(0, 0, 0, 0.75);
-            -moz-box-shadow: 0 0 50px -5px rgba(0, 0, 0, 0.75);
-            box-shadow: 0 0 50px -5px rgba(0, 0, 0, 0.75);
-            border: 1px solid rgba(0, 0, 0, 0.2);
-        }
+.sidebar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  z-index: 1;
+  border-radius: 15px;
+  background: rgba(105, 131, 118, 0.1);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(8px);
+  -moz-backdrop-filter: blur(8px);
+  -ms-backdrop-filter: blur(8px);
+  -webkit-box-shadow: 0 0 50px -5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0 0 50px -5px rgba(0, 0, 0, 0.75);
+  box-shadow: 0 0 50px -5px rgba(0, 0, 0, 0.75);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
 
-        .sidebar a {
-            color: #fff;
-            padding: 13px;
-            text-decoration: none;
-            box-sizing: border-box;
-            font-family: "Lato", sans-serif;
-            transition: all 0.5s ease;
-            z-index: 1;
-        }
+.sidebar a {
+  color: #fff;
+  padding: 13px;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  transition: all 0.5s ease;
+  z-index: 1;
+}
 
-        .sidebar a.active {
-            color: #ffffff;
-            background: #a772ff;
-            border-radius: 10px;
-            z-index: 1;
-        }
+.sidebar a.active {
+  color: #ffffff;
+  background: #a772ff;
+  border-radius: 10px;
+  z-index: 1;
+}
 
-        .sidebar a span {
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            z-index: 1;
-        }
+.sidebar a span {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  z-index: 1;
+}
 
-        html,
-        body {
-            width: 100%;
-            height: 100%;
-            background-color: #0b0b0b;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-        }
+html,
+body {
+  width: 100%;
+  height: auto;
+  background-color: #0b0b0b;
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+}
 
-        /* SEARCH */
+/* SEARCH */
 
-        iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
 
-        .nav-active {
-            position: relative;
-            border: none;
-            border-radius: 3px;
-            padding: 10px 20px;
-            background-color: transparent;
-            color: #ffffff;
-            cursor: pointer;
-            text-decoration: none;
-        }
+.nav-active {
+  position: relative;
+  border: none;
+  border-radius: 3px;
+  padding: 10px 20px;
+  background-color: transparent;
+  color: #ffffff;
+  cursor: pointer;
+  text-decoration: none;
+}
 
-        .nav-active::after {
-            content: "";
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            bottom: 0;
-            width: 50%;
-            height: 2px;
-            background-color: #fff;
-        }
+.nav-active::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  width: 50%;
+  height: 2px;
+  background-color: #fff;
+}
 
-        .nav-active:hover {
-            background-color: #fff;
-        }
+.nav-active:hover {
+  background-color: #fff;
+}
 
-        .nav-btn:hover {
-            background-color: #302f2f;
-        }
+.nav-btn:hover {
+  background-color: #302f2f;
+}
 
-        a {
-            margin-right: 10px;
-        }
+a {
+  margin-right: 10px;
+}
 
-        body {
-            margin: 0;
-            padding: 0;
-            background: #161515;
-            color: #FFF;
-            font-family: Roboto, sans-serif;
-            font-weight: 400;
-            text-align: center;
-        }
-
-        /* Estilos para las cajas de juegos */
-        .games-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 10px; /* Espacio entre las cajas de juegos */
-            margin-top: 20px;
-        }
-
-        .box {
-            position: relative;
-            overflow: hidden;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease-out;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 150px; /* Ajusta la altura deseada para cada caja de juego */
-            width: calc(20% - 10px); /* Calcula el ancho de cada caja para tener 5 por fila */
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .box:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        }
-
-        .box img {
-            max-width: 100%;
-            max-height: 100%;
-            vertical-align: middle;
-        }
-
-        .textover {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            color: white;
-            padding: 10px;
-            box-sizing: border-box;
-            transform: translateY(100%);
-            transition: transform 0.3s ease-out;
-        }
-
-        .box:hover .textover {
-            transform: translateY(0);
-        }
     </style>
 </head>
 
 <body>
     <div class="sidebar">
-        <a href="/" id="">
-            <img src="" alt="">
-        </a>
+    <a href="/" id="">
+        <img src="" alt="">
+    </a>
 
-        <a href="./index.html" class="nav-btn"><span>Home</span></a>
-        <a href="./Games.html" class="nav-active"><span>Games</span></a>
+        <a href="index.html" class="nav-btn"><span>Home</span></a>
+        <a href="Games.html" class="nav-active"><span>Games</span></a>
         <a href="Apps.html" class="nav-btn"><span>Apps</span></a>
         <a href="Youtube.html" class="nav-btn"><span>Youtube-unblock</span></a>
     </div>
 
-    <div class="games-container">
-        <!-- Ejemplo de caja de juego con imagen de prueba -->
-        <div class="box">
-            <a href="#">
-                <img class="ImageForGame" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSp-7WmGrclnPy4Y7vQMYkdkORBUeQcmyVigw&s" alt="game">
-                <div class="textover">Sample Game Title</div>
-            </a>
+    <header>
+        <div class="container">
+            
+                <h1 class="brillante">
+                    <br>
+                    <span>Games And</span>
+                    <span>Swf</span>
+                </h1>
+            </div>
         </div>
+ <style>
 
-        <!-- Agregar más cajas de juegos aquí -->
-        <div class="box">
-            <a href="#">
-                <img class="ImageForGame" src="https://via.placeholder.com/300x200.png?text=Sample+Game+Image" alt="game">
-                <div class="textover">Sample Game Title</div>
-            </a>
-        </div>
 
-        <div class="box">
-            <a href="#">
-                <img class="ImageForGame" src="https://via.placeholder.com/300x200.png?text=Sample+Game+Image" alt="game">
-                <div class="textover">Sample Game Title</div>
-            </a>
-        </div>
+img {
 
-        <div class="box">
-            <a href="#">
-                <img class="ImageForGame" src="https://via.placeholder.com/300x200.png?text=Sample+Game+Image" alt="game">
-                <div class="textover">Sample Game Title</div>
-            </a>
-        </div>
+margin: 10px;
+position: relative;
+z-index: 1;
+}
 
-        <div class="box">
-            <a href="#">
-                <img class="ImageForGame" src="https://via.placeholder.com/300x200.png?text=Sample+Game+Image" alt="game">
-                <div class="textover">Sample Game Title</div>
-            </a>
-        </div>
+    header {
+    margin-top: 50px; /* O el valor que desees */
+}
+.btn-group button {
+  background-color: black; /* Green background */
 
-        <div class="box">
-            <a href="#">
-                <img class="ImageForGame" src="https://via.placeholder.com/300x200.png?text=Sample+Game+Image" alt="game">
-                <div class="textover">Sample Game Title</div>
-            </a>
-        </div>
+color: white; /* White text / padding: 10px 24px; / Some padding / cursor: pointer; / Pointer/hand icon / float: left; / Float the buttons side by side */ }
 
-        <div class="box">
-            <a href="#">
-                <img class="ImageForGame" src="https://via.placeholder.com/300x200.png?text=Sample+Game+Image" alt="game">
-                <div class="textover">Sample Game Title</div>
-            </a>
-        </div>
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
 
-        <div class="box">
-            <a href="#">
-                <img class="ImageForGame" src="https://via.placeholder.com/300x200.png?text=Sample+Game+Image" alt="game">
-                <div class="textover">Sample Game Title</div>
-            </a>
-        </div>
+.btn-group button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
 
-        <div class="box">
-            <a href="#">
-                <img class="ImageForGame" src="https://via.placeholder.com/300x200.png?text=Sample+Game+Image" alt="game">
-                <div class="textover">Sample Game Title</div>
-            </a>
-        </div>
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: black;
+}
 
-        <!-- Puedes agregar más cajas de juego aquí -->
-    </div>
+/* Header/Logo Title */
 
+/* Page Content */
+
+</style>
+
+<body>
+
+<style>
+    .game {
+        position: absolute;
+color: black;
+
+transform: scale(1.8);
+  z-index: 3;
+  font-family: Arial, Helvetica, sans-serif;
+    }
+    .fade {
+        position: absolute;
+        background: black(to bottom, #1d1d1d, #1d1d1d5d, black
+(39, 39, 39, 0));
+        width: 300px;
+        height: 150px;
+     border-radius: 15px;
+    }
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 85vw;
+  margin: 1rem auto;
+}
+
+.bg,
+.overlay {
+  text-align: center;
+}
+
+img,
+.overlay {
+  transition: .3s all;
+  border-radius: 3px;
+}
+
+.day {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  color:black;
+  position: relative;
+z-index: 1;
+}
+
+@keyframes rise{
+  0%{
+    bottom:-100px;
+    transform:translateX(0);
+  }
+  50%{
+    transform:translate(100px);
+  }
+  100%{
+    bottom:1080px;
+    transform:translateX(-200px);
+  }
+}
+
+.hello img {
+            width: 100%;
+            transition: 0.5s all ease-in-out;
+        }
+
+    .hello:hover img {
+      transform-origin: top;
+        transform: scale(1.1);
+    }
+</style>
+<style>
+  .topnav {
+  overflow: hidden;
+  position: fixed;
+  z-index: 5;
+  display: none;
+  border-radius: 30px;
+  background-color: #333;
+}
+
+p {
+  transition: 0.5s;
+}
+
+.topnav p {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+
+padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.ImageForGame {
+  border-radius: 15px;
+   width: 180px;
+opacity: 0;
+
+height: 180px;
+  transition: 0.5s;
+  box-shadow: 5px 5px 5px 5px black(13, 13, 13, 0.725);
+
+}
+.ImageForGame:hover{
+  transform: scale(1.1);
+  box-shadow: 2px 2px 2px 2px black(79, 79, 79, 0.725);
+
+} @keyframes scroll { from {top: -0%;} to {top: -50%;} } @keyframes scroll2 { from {top: -50%;} to {top: -0%;} } /* Webkit based browsers (Chrome, Safari) / ::-webkit-scrollbar { width: 10px; / Adjust the width as needed */ }
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: black(146, 145, 145); /* Adjust the color and opacity as needed */
+  border-radius: 20px;
+}
+
+/* Firefox */
+body {
+
+}
+::-moz-scrollbar {
+  width: 8px; /* Adjust the width as needed */
+}
+
+::-moz-scrollbar-track {
+  background-color: transparent;
+}
+::-moz-scrollbar-thumb {
+  background-color: black(0, 0, 0, 0.2); /* Adjust the color and opacity as needed */
+}
+
+/* Hide default scrollbar track */
+::-webkit-scrollbar-track-piece,
+::-webkit-scrollbar-corner,
+::-moz-scrollbar-track-piece {
+  background-color: transparent;
+}
+
+
+</style>
+
+<script>
+  console.log('eee')
+ 
+</script>
+
+<!--div class="hello" style=" margin-right: auto; margin-left: auto; width: 430px;">
+  <a href="https://sites.google.com/view/fnf-unblockedhehe/home">
+      <p class="game" style="left: 105px;" >Infinite Tower</p>
+      <div class="fade" ></div>
+   <img style="border-radius: 15px; width: 400px;" src="https://github.com/sz-games/sz-games.github.io/blob/main/cover/fn.png?raw=true" alt="game">
+  </a>
+
+</div-->
+<style>
+  .inputbox {
+  position: relative;
+  width: 196px;
+  z-index: 6;
+  left: 50%;
+  transform: translate(-50%, -0%);
+}
+
+.inputbox input {
+  position: relative;
+  width: 100%;
+  padding: 20px 10px 10px;
+  background: transparent;
+  outline: none;
+  box-shadow: none;
+  border: none;
+  color: #ffffff;
+  font-size: 1em;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+  z-index: 10;
+}
+
+.inputbox label {
+  position: absolute;
+  left: 0;
+  padding: 20px 10px 10px;
+  font-size: 1em;
+  color: #ffffff;
+  letter-spacing: 00.05em;
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.inputbox input:valid ~label,
+.inputbox input:focus ~label {
+  color: #ffffff;
+  transform: translateX(-10px) translateY(-34px);
+  font-size: 0,75em;
+}
+
+.inputbox i {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #3d3d3d;
+  border-radius: 4px;
+  transition: 0.5s;
+  pointer-events: none;
+  z-index: 9;
+}
+
+.inputbox input:valid ~i,
+.inputbox input:focus ~i {
+  height: 44px;
+}
+
+@keyframes show {
+  from {
+    transform: scale(1.3);
+    opacity: 0 !important;
+  }
+
+to {
+    transform: scale(1.0);
+    opacity: 1 !important;
+  }
+}
+
+.box {
+
+opacity: 0;
+  transition: 0.5s;
+}
+
+.show {
+  animation: show 0.5s;
+  opacity: 1 !important;
+}
+
+.showIMG {
+  opacity: 1 !important;
+}
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    <style>
+  .image-container {
+    text-align: center;
+  }
+
+    .center-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /*Ajusta la altura si es necesario*/
+    }
+
+    img {
+  width: 26%; /* Ajusta el tamaño de la imagen según tus necesidades */
+  height: auto; /* Mantiene la proporción original de la imagen */
+}
+
+</style>
+
+
+
+<div class="image-container">
+    <br>
+    <br>
+ <div style="text-align: center;"> <img src="https://elinsanocapo.github.io/beta-/img/Screenshot%202023-10-04%2020.36.31.png">"
+</div>
+</div>
+    <br>
+        <br>
+        <br>
+<div class="container">
+<div id="games">
+
+<div class="box" id="Infinite Tower" style="position: relative; float: left; ">
+
+</div>
+
+<div class="box" id="Tunnel Rush" style="position: relative; float: left;">
+  <a href="./Games/tunnel-rush/">
+
+  <!--p class="game" >Tunnel Rush</p>
+  <div class="fade" ></div-->
+<img fetchpriority="low" class="ImageForGame" data-src="https://github.com/sz-games/sz-games.github.io/blob/main/cover/tunnel.webp?raw=true" alt="game">
+   <div class="textover" style=" border-radius: 15px; background-color: #191919db;   top: 15% !important; color: rgb(255, 255, 255) !important;">Tunnel Rush</div>
+  </a>
+
+</div>
+
+<div class="box" id="Space War" style="position: relative; float: left;">
+  <a href="./Games/spac/">
+
+  <!--p class="game" >Space Wars </p>
+  <div class="fade" ></div-->
+<img fetchpriority="low" class="ImageForGame" data-src="https://raw.githubusercontent.com/sz-games/sz-games.github.io/main/cover/space.webp" alt="game">
+   <div class="textover" style=" border-radius: 15px; background-color: #191919db;   top: 15% !important; color: rgb(255, 255, 255) !important;">Space War</div>
+  </a>
+
+</div>
+
+<div class="box" id="Slope" style="position: relative; float: left;">
+<a href="./Games/Slope/index.html">
+
+<img fetchpriority="low" class="ImageForGame" data-src="https://raw.githubusercontent.com/sz-games/sz-games.github.io/main/cover/slope.webp" alt="game">
+<div class="textover" style=" border-radius: 15px; background-color: #191919db;   top: 15% !important; color: rgb(255, 255, 255) !important;">Slope</div>
+</a>
+
+</div>
+
+<div class="box" id="Asteroids Belt" style="position: relative; float: left;">
+  <a href="./Games/spacesh/">
+    <img fetchpriority="low" class="ImageForGame" data-src="https://raw.githubusercontent.com/sz-games/sz-games.github.io/main/cover/Astr.webp" alt="game">
+
+<div class="textover" style=" border-radius: 15px; background-color: #191919db;   top: 15% !important; color: rgb(255, 255, 255) !important;">Asteroids Belt</div>
+</a>
+
+</div>
+
+<div class="box" id="Survivor Mode" style=" float: left;">
+  <a href="./Games/zombie/">
+    <img fetchpriority="low" class="ImageForGame" data-src="https://github.com/sz-games/sz-games.github.io/blob/main/cover/zombie.png?raw=true" alt="game">
+
+</a>
+
+
+</div>
+
+
+
+</div>
+
+<style>
+  @keyframes medal {
+    0% { left: -500px;}
+    20% {left: -1px;}
+    50% {left: -1px;}
+    70% {left: -1px;}
+    90% {opacity: 1;left: -1px;}
+    100% {opacity: 0; left: -500px;}
+  }
+
+</style>
+
+<!--div id="medall" style="opacity: 0;  margin-left: 1px;  animation-duration: 15s; transition: 0.5s; position: fixed; z-index: 5; box-shadow: 12px 12px #39393963; top: 10%; border-radius: 0px 25px 25px 0px; width: 300px; height: 150px; background-color: #1d1d1d;">
+<h2 id="okf" style="margin-left: 50px; color: white; font-family: Verdana, Geneva, Tahoma, sans-serif;">Medal Earned!</h2>
+<h2  id="namemed" style=" margin-left: 0px; color: white;">Afk</h2>
+<p  id="meddle" style=" color: white; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Stayed On The Home Page For 5 minutes.</p>
+</div-->
+
+<!--script>
+  var afkk = document.getElementById('afkk')
+  var firststeps = document.getElementById('first-steps')
+  var afkpr = false;
+
+var firstt = false;
+
+afkk.style.color = "#595959";
+var Name = document.getElementById('namemed');
+   var description = document.getElementById('meddle');
+   var medd = document.getElementById('medall');
+   setInterval(displayHello, 1000);
+
+function displayHello() {
+   if (localStorage.clickcount) {
+    afkk.style.color = 'white';
+} else {
+
+afkk.style.color = "#595959";
+  //localStorage.clickcount = 1;
+}
+   }
+  setTimeout(() => {
+
+afkk.style.color = 'white';
+Name.innerHTML = "Afk";
+
+localStorage.clickcount = 1;
+
+description. innerHTML = "Stayed On The Home Page For 5 minutes.";
+   medd.style.opacity = 1;
+    medd.style.animation = 'medal 15s';
+    setTimeout(() => {
+
+medd.style.opacity = 0;
+
+}, 15000);
+  }, 300000);
+
+</script-->
+
+<div class="box" id="bloxorz" style="position: relative; float: left;">
+  <a href="https://inconel-rose.vercel.app/games/madalin-cars">
+    <img class="ImageForGame" data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXazuWaEScNVn-5rNZ6-hZbC-9lbq09OYIjQ&s" alt="game">
+    <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;  top: 15% !important; color: rgba(255, 255, 255, 0.827) !important; color: rgb(255, 255, 255) !important;">madalin-cars</div>
+
+</a>
+
+</div>
+
+<div class="box" id="cookie clicker" style=" float: left;">
+  <a href="https://ubg77.github.io/game131022/drive-mad/">
+    <img class="ImageForGame" data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvsemrPwQwjSu4WXezRvMSOfZs98oE5F5nCx-wkjKCgPx9i7OqwbwJCIIrLSjITLKguK4&usqp=CAU" alt="game">
+
+</a>
+
+</div>
+
+<div class="box" id="agar.io" style="position: relative; float: left;">
+  <a href="https://ubg77.github.io/updatefaqs/subway-surfers-nyc/">
+    <img class="ImageForGame" data-src="https://media.vandal.net/m/21741/subway-surfers-2013817124114_1.jpg" alt="game">
+
+<div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;   color: rgba(255, 255, 255, 0.827) !important; color: rgb(255, 255, 255) !important;">subway-surfers</div>
+</a>
+
+</div>
+
+<style> .textover { position: absolute; top: 15%; left: 50%; width: 80% !important; transform: translate(-50%, -50%); z-index: 1; border-radius: 15px; background-color: #191919db; color: rgb(255, 255, 255) !important; font-weight: bold;
+text-align: center; padding: 0px 5px; } </style>
+
+<div class="box" id="crossy road" style=" position: relative; float: left;">
+  <a href="https://www.mathplayground.com/drift-boss-v3/index.html">
+    <img class="ImageForGame" data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkU591c7xztPRIaSo7qYYBxIacHFTqLc3Nnxxfo4zFjYplqO-tJTr_1i32TaHhRwiHziY&usqp=CAU" alt="game">
+    <div class="textover" style="">drift-boss-v3</div>
+  </a>
+</div>
+    
+<div class="box" id="Bitlife" style="position: relative; float: left;">
+  <a href="./capito/minecraft-insano/">
+    h<img class="ImageForGame"  data-src="https://seeklogo.com/images/M/minecraft-youtube-logo-448E10AC2B-seeklogo.com.png" alt="game">
+    <div class="textover" style="">Minecraft</div>
+  </a>
+</div>
+
+
+<div class="box" id="EEL Slap" style="position: relative; float: left;">
+  <a href="./capito/eelslap/index.html">
+    <img class="ImageForGame" data-src="https://github.com/sz-games/storage3/blob/main/eelslap/Screenshot%202023-04-25%20at%202.35.48%20PM.png?raw=true" alt="game">
+    <div class="textover" style="">eel Slap</div>
+  </a>
+</div>
+
+
+<div class="box" id="WebGL Fluid Animation" style="position: relative; float: left;">
+  <a href="./capito/1/index.html">
+    <img class="ImageForGame" data-src="https://github.com/sz-games/storage3/blob/main/1/logo.png?raw=true" alt="game">
+    <div class="textover" style="">WebGl Fluid Animation</div>
+  </a>
+</div>
+
+
+
+
+
+<div class="box" id="Fnaf 1" style="position: relative; float: left;">
+  <a href="https://ubg77.github.io/fix/fnaf1/">
+    <img class="ImageForGame"  data-src="https://media.vandal.net/i/1280x720/6-2021/20216179581325_1.jpg" alt="game">
+    <div class="textover" >FNAF</div>
+  </a>
+</div>
+
+<div class="box"  id="Fnaf 2" style="position: relative; float: left;">
+  <a href="https://ubg77.github.io/fix/fnaf2/">
+    <img class="ImageForGame"  data-src="https://m.media-amazon.com/images/I/81HBpJd2h8L.png" alt="game">
+    <div class="textover" >FNAF 2</div>
+  </a>
+</div>
+
+<div class="box" id="Fnaf 3" style="position: relative; float: left;">
+  <a href="https://ubg77.github.io/fix/fnaf2/fnaf3.html">
+    <img class="ImageForGame"  data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEbz5FgiqbolmqmEHa358sb2tCQitCM_Em6A&s" alt="game">
+    <div class="textover" >FNAF 3</div>
+  </a>
+</div>
+
+<div class="box" id="Fnaf 4" style="position: relative; float: left;">
+  <a href="https://ubg77.github.io/fix/fnaf2/fnaf4.html">
+    <img class="ImageForGame"  data-src="https://kevin.games/assets/cache_image/new/fnaf-4_200x200_d47.png" alt="game">
+    <div class="textover" >FNAF 4</div>
+  </a>
+</div>
+
+<div class="box" id="Fruit Ninja" style="position: relative; float: left;"> <a href="https://elinsanocapo.github.io/home/lbannana-assets/flash/index.html?swf=pong.swf"> <img class="ImageForGame" data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPdHbdrFPozWQwSqZs3SgtbXHddwx928RyPPtuRnvBJZxEAER_BnC2EPNLU3jPAhPFaEE&usqp=CAU" alt="game"> <div class="textover" style="color: rgb(255, 255, 255) !important;">ping pong</div> </a> </div>
+
+<div  class="box" id="Temple Run 2" style="position: relative; float: left;">
+  <a href="./lbannana-assets/flash/index.html?swf=ultimate-flash-sonic.swf">
+    <img class="ImageForGame"  data-src="https://a.silvergames.com/j/b/ultimate-flash-sonic.jpg" alt="game">
+    <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;  color: rgba(255, 255, 255, 0.827) !important;">flash-sonic</div>
+  </a>
+</div>
+
+<div class="box" id="Uno" style="position: relative; float: left;">
+  <a href="./lbannana-assets/flash/index.html?swf=Angry%20Birds%20HD%20Halloween.swf">
+    <img class="ImageForGame"  data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTB8RorzMdLsheyCTNuiO743cE64Memi2VXQQ&usqp=CAU" alt="game">
+    <div class="textover" >Angry Birs Halloween</div>
+  </a>
+</div>
+
+<div class="box" id="We Become What We Behold" style="position: relative; float: left;"> <a href="./lbannana-assets/flash/index.html?swf=weebly_apple_shooter.swf"> <img class="ImageForGame" data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5z_iktEWsDww3XFuXWLv2X-h2yR0N8vZWmIh5HcLwyfVEN9juA8uJkgbuX6URhQSIFKM&usqp=CAU" alt="game"> <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db; top: 15% !important; color: rgba(255, 255, 255, 0.827) !important;">weebly_apple_shooter</div> </a> </div>
+
+
+<div class="box" id="Super Mario 64" style="position: relative; float: left;">
+  <a href="https://elinsanocapo.github.io/cha-p0/projects/backrooms/index.html">
+    <img class="ImageForGame"  data-src="https://media.wired.com/photos/627b0c1fb6048c47d506c6c0/16:9/w_1551,h_872,c_limit/Backrooms-Games.jpg" alt="game">
+    <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;  top: 13% !important; color: rgba(255, 255, 255, 0.827) !important;">backrooms</div>
+  </a>
+</div>       
+
+<div class="box" id="Chess" style="position: relative; float: left;"> <a href="https://ubg77.github.io/fix/murder/"> <img class="ImageForGame" data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgfv_omYiJ7euXTeRuZLc38Q9WiEU7j8GKJMzl2z6rTNktt1Hc1M_Xc4Ovhc8rMdTdq20&usqp=CAU" alt="game"> <div class="textover" style="color: rgba(255, 255, 255, 0.827) !important;">Murder</div> </a> </div>
+
+<div class="box" id="george and the printer" style="position: relative; float: left;"> <a href="./lbannana-assets/flash/index.html?swf=SuperMarioFlash.swf"> <img class="ImageForGame" data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqS6Auwa2NRNGWtdUL8agdCMq4rsas36Ib319vkiZJQfFPGe1dBn95pT82cvVWdmTZzrA&usqp=CAU" alt="game"> <div class="textover" style="color: rgba(255, 255, 255, 0.827) !important;">Super Mario</div> </a> </div>
+
+<div class="box" id="Bloons Tower Defense 2" style="position: relative; float: left;"> <a href="./lbannana-assets/flash/index.html?swf=electricman2.swf"> <img class="ImageForGame" data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxc__vz_nMGn8xAlKx7jmtRgBmcTZ7pkTG5zyTSkOMgs2ZeZxD4Hufb3YuXtpQNF21XT4&usqp=CAU" alt="game"> <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db; color: rgba(255, 255, 255, 0.827) !important;">Electriocman 2</div> </a> </div>
+
+<div class="box" id="Chill Radio" style="position: relative; float: left;">
+  <a href="./lbannana-assets/flash/index.html?swf=bloxorz.swf">
+    <img class="ImageForGame"  data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgbbSh-DIJlzcRibrnxMuQUckMi9ClBtuCkvTliR4MlJp-stbusFmVdjYw9_qZcA89Uzs&usqp=CAU" alt="game">
+    <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;  top: 13% !important; color: rgba(255, 255, 255, 0.827) !important;">bloxorz</div>
+  </a>
+</div>
+
+
+<div class="box" id="Cube Engine" style="position: relative; float: left;">
+  <a href="./lbannana-assets/flash/index.html?swf=pizzeria.swf">
+    <img class="ImageForGame"  data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBtS9xcUOJWvEtTzkmJRKfQNADVU3FA4meYCP0vvl9r5hipZhEJ7AilivNOtZ2s7UUK3k&usqp=CAU" alt="game">
+    <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;  top: 13% !important; color: rgba(255, 255, 255, 0.827) !important;">papa's pizzeria</div>
+  </a>
+</div>
+
+<div class="box" id="Cube Engine" style="position: relative; float: left;">
+  <a href="./lbannana-assets/flash/index.html?swf=PapasBurgeria.swf">
+    <img class="ImageForGame"  data-src="https://elinsanocapo.github.io/new/img/burgeria.jpeg" alt="game">
+    <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;  top: 13% !important; color: rgba(255, 255, 255, 0.827) !important;">papa's Burgeria</div>
+  </a>
+</div>
+    
+<div class="box" id="Cube Engine" style="position: relative; float: left;">
+  <a href="./lbannana-assets/flash/index.html?swf=papaspastaria.swf">
+    <img class="ImageForGame"  data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQywcCQu3K8ahWwvtAPTpOjJlpoJcVID4YYMQ&usqp=CAU" alt="game">
+    <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;  top: 13% !important; color: rgba(255, 255, 255, 0.827) !important;">papa-s-pastaria</div>
+  </a>
+</div>
+    
+<div class="box" id="Cube Engine" style="position: relative; float: left;">
+  <a href="./lbannana-assets/flash/index.html?swf=papassushiria.swf">
+    <img class="ImageForGame"  data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzjrdeOZhcjSEzd5ZNhujJPxbyACEk-RxJcKCp6wSyu7jH6bkpgdvhC05j47a1-Fu0T8U&usqp=CAU" alt="game">
+    <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;  top: 13% !important; color: rgba(255, 255, 255, 0.827) !important;">papa-s-sushiria</div>
+  </a>
+</div>
+
+<div class="box" id="Cube Engine" style="position: relative; float: left;">
+  <a href="./lbannana-assets/flash/index.html?swf=papastacomia.swf">
+    <img class="ImageForGame"  data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzWalIWWWjlI-XD16ITVM4X9qG4xF_6JCQOhlrDaxZcCVFtU4Cs-LDNk-XB2jVhI1ugro&usqp=CAU" alt="game">
+    <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;  top: 13% !important; color: rgba(255, 255, 255, 0.827) !important;">papa-s-taco</div>
+  </a>
+</div>
+
+<div class="box" id="Cube Engine" style="position: relative; float: left;">
+  <a href="./lbannana-assets/flash/index.html?swf=papaswingeria.swf">
+    <img class="ImageForGame"  data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzMd4dNOdXS39Am4yL61iGiI4wrRlg4qIJsP8HqYOn2NTADvkvd_mhs8KV-M-8QGlg0FQ&usqp=CAU" alt="game">
+    <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;  top: 13% !important; color: rgba(255, 255, 255, 0.827) !important;">papa-s-wingeria</div>
+  </a>
+</div>
+
+<div class="box" id="Cube Engine" style="position: relative; float: left;">
+  <a href="./lbannana-assets/flash/index.html?swf=papasbakeria.swf">
+    <img class="ImageForGame"  data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0R7vRd_E2Toexr6ej9nXhWAMph-Mdpr4VZg&usqp=CAU" alt="game">
+    <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;  top: 13% !important; color: rgba(255, 255, 255, 0.827) !important;">papasbakeria</div>
+  </a>
+</div>
+
+<div class="box" id="Cube Engine" style="position: relative; float: left;">
+  <a href="./lbannana-assets/flash/index.html?swf=papascheeseria.swf">
+    <img class="ImageForGame"  data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKzNZ02fXFWnXdh_JZkJrtPwLHsXz5HZiKOg&usqp=CAU" alt="game">
+    <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;  top: 13% !important; color: rgba(255, 255, 255, 0.827) !important;">papascheeseria</div>
+  </a>
+</div>
+
+<div class="box" id="Cube Engine" style="position: relative; float: left;">
+  <a href="./lbannana-assets/flash/index.html?swf=papascupcakeria.swf">
+    <img class="ImageForGame"  data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBqk3IPYpk2TwmQqivN5xN1_l2e0INnm_1MA&usqp=CAU" alt="game">
+    <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;  top: 13% !important; color: rgba(255, 255, 255, 0.827) !important;">papascupcakeria</div>
+  </a>
+</div>
+
+<div class="box" id="Cube Engine" style="position: relative; float: left;">
+  <a href="./lbannana-assets/flash/index.html?swf=papasdonuteria.swf">
+    <img class="ImageForGame"  data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuGojREaBtxZUZWCo5KwRWdJXKg2Rkdt8D_w&usqp=CAU" alt="game">
+    <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;  top: 13% !important; color: rgba(255, 255, 255, 0.827) !important;">papasdonuteria</div>
+  </a>
+</div>
+
+<div class="box" id="Cube Engine" style="position: relative; float: left;">
+  <a href="./lbannana-assets/flash/index.html?swf=papashotdoggeria.swf">
+    <img class="ImageForGame"  data-src="https://play-lh.googleusercontent.com/gQHhv-BDnxtaQdwtnDfGzdTAl5UfraC93FrE7jQRc-S7sMNbc22eVGd8llA6_RIj8C0K" alt="game">
+    <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;  top: 13% !important; color: rgba(255, 255, 255, 0.827) !important;">papashotdoggeria</div>
+  </a>
+</div>
+    
+<div class="box" id="Super Mario 64" style="position: relative; float: left;">
+  <a href="https://elinsanocapo.github.io/cha-p0/projects/fruitninja/index.html">
+    <img class="ImageForGame"  data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT16YVEad9beQdgDOFCH8b4YrDPxgalN0wYrI04b_FJGSE961DJ7z5PflP8KlBNd-YYESE&usqp=CAU" alt="game">
+    <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;  top: 13% !important; color: rgba(255, 255, 255, 0.827) !important;">fruitninja</div>
+  </a>
+</div>       
+
+    
+<div class="box" id="Super Mario 64" style="position: relative; float: left;">
+  <a href="./lbannana-assets/flash/index.html?swf=supermario63.swf">
+    <img class="ImageForGame"  data-src="https://github.com/sz-games/sz-games.github.io/blob/main/cover/64.jpeg?raw=true" alt="game">
+    <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;  top: 13% !important; color: rgba(255, 255, 255, 0.827) !important;">Super Mario 64</div>
+  </a>
+</div>
+    
+<div class="box" id="Super Mario 64" style="position: relative; float: left;">
+  <a href="./lbannana-assets/flash/index.html?swf=earn-to-die-2012-part-2.swf">
+    <img class="ImageForGame"  data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6dTDXVOh5o97QOERL-xMpdw9WwwDah_TkhPmNFQR-3exSLOs8Q9Qon67746AWf3UiPc0&usqp=CAU" alt="game">
+    <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;  top: 13% !important; color: rgba(255, 255, 255, 0.827) !important;">earn-to-die-2012-part-2</div>
+  </a>
+</div>
+
+<div class="box" id="Super Mario 64" style="position: relative; float: left;">
+  <a href=" ./lbannana-assets/flash/index.html?swf=highway-justice.swf">
+    <img class="ImageForGame"  data-src="https://kizicdn.com/system/static/thumbs/tile_thumb/1326/thumb150_Untitled-4.jpg?1556201857" alt="game">
+    <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;  top: 13% !important; color: rgba(255, 255, 255, 0.827) !important;">highway-justice</div>
+  </a>
+</div>
+
+    
+<div class="box" id="Super Mario 64" style="position: relative; float: left;">
+  <a href="./lbannana-assets/flash/index.html?swf=CACTUSMCCOY2.swf">
+    <img class="ImageForGame"  data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZGGqT-uzObR9uqiSTScMsw82CjkjFuHtQv5H2HmCkijlI-bZ9lUor4hVpVqBN-mDx3bc&usqp=CAU" alt="game">
+    <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;  top: 13% !important; color: rgba(255, 255, 255, 0.827) !important;">CACTUS MCCOY 2</div>
+  </a>
+</div>
+    
+<div class="box" id="Super Mario 64" style="position: relative; float: left;">
+  <a href="https://elinsanocapo.github.io/cha-p0/projects/basketball-stars/index.html">
+    <img class="ImageForGame"  data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRx126jEipbBonERmwE2BPfs-acTkTSTNrU2rYQdH68aN6issftoWN3c0AH7tFyAtlU5P8&usqp=CAU" alt="game">
+    <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;  top: 13% !important; color: rgba(255, 255, 255, 0.827) !important;">basketball-stars</div>
+  </a>
+</div>   
+    
+
+<div class="box" id="Super Mario 64" style="position: relative; float: left;">
+  <a href="./lbannana-assets/flash/index.html?swf=red-driver-2.swf">
+    <img class="ImageForGame"  data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuJknIh-GKaisUIvZTIqLZKBt0iuR_K7Qj3g&usqp=CAU" alt="game">
+    <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;  top: 13% !important; color: rgba(255, 255, 255, 0.827) !important;">red-driver-2</div>
+  </a>
+</div>
+
+<div class="box" id="Super Mario 64" style="position: relative; float: left;">
+  <a href="https://elinsanocapo.github.io/cha-p0/projects/noob-steve-parkour">
+    <img class="ImageForGame"  data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8ylLb8DMviMaeMl6CIUSOF7krh3HB01Y3loDvASlIYV-YcUgffM2fPX8ZV_aMOjpLBGg&usqp=CAU" alt="game">
+    <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;  top: 13% !important; color: rgba(255, 255, 255, 0.827) !important;">noob-steve-parkour</div>
+  </a>
+</div>   
+    
+
+<div class="box" id="Super Mario 64" style="position: relative; float: left;">
+  <a href="./lbannana-assets/flash/index.html?swf=HappyWheels.swf">
+    <img class="ImageForGame"  data-src="https://m.media-amazon.com/images/M/MV5BZWU1ZTYxNzEtNWNkOC00MDNhLWI2ZGYtOGEyYzQyYzllYjBiXkEyXkFqcGdeQXVyMzUwNDgxNTY@._V1_.jpg" alt="game">
+    <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;  top: 13% !important; color: rgba(255, 255, 255, 0.827) !important;">Happy Wheels</div>
+  </a>
+</div>    
+    
+<div class="box" id="Super Mario 64" style="position: relative; float: left;">
+  <a href="./lbannana-assets/flash/index.html?swf=pipe-riders.swf">
+    <img class="ImageForGame"  data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXbDONjy2q4Tq4WqVZH3KQ1xnN_oWOji_OOfV4BVqkYD2Zxr_856gYRlrW7qapRC7Faes&usqp=CAU" alt="game">
+    <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;  top: 13% !important; color: rgba(255, 255, 255, 0.827) !important;">pipe-riders</div>
+  </a>
+</div>    
+    
+
+<div class="box" id="Super Mario 64" style="position: relative; float: left;">
+  <a href="./Games/DriftHunters/">
+    <img class="ImageForGame"  data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPtncJk4yi1o9sX2mQdnypxgxYZ6ECB3S6AIDWYqIxrCjf65LTxwydgS6_c14iEcmFtnI&usqp=CAU" alt="game">
+    <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;  top: 13% !important; color: rgba(255, 255, 255, 0.827) !important;">Drift-hunters</div>
+  </a>
+</div>   
+    
+
+<div class="box" id="Super Mario 64" style="position: relative; float: left;">
+  <a href="https://bitlifeonline.github.io/bob-the-robber/">
+    <img class="ImageForGame"  data-src="https://tcf.admeen.org/category/3000/2948/400x400/bob-the-robber.jpg" alt="game">
+    <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;  top: 13% !important; color: rgba(255, 255, 255, 0.827) !important;">bobtherobber</div>
+  </a>
+</div>      
+    
+<div class="box" id="Super Mario 64" style="position: relative; float: left;">
+  <a href="https://elinsanocapo.github.io/cha-p0/projects/bobtherobber2/index.html">
+    <img class="ImageForGame"  data-src="https://gameforge.com/de-DE/littlegames/includes/images/games/9468_5eb3ef7732ef0.jpg" alt="game">
+    <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;  top: 13% !important; color: rgba(255, 255, 255, 0.827) !important;">bobtherobber2</div>
+  </a>
+     
+
+</div>     
+
+
+<div class="box" id="Super Mario 64" style="position: relative; float: left;">
+  <a href="https://bitlifeonline.github.io/bob-the-robber-3/">
+    <img class="ImageForGame"  data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUnn1CnADSwWzVeEJmJMwIxQ9Zfh-GB6cI-w&usqp=CAU" alt="game">
+    <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;  top: 13% !important; color: rgba(255, 255, 255, 0.827) !important;">bobtherobber3</div>
+  </a>
+</div>  
+
+    
+<div class="box" id="Super Mario 64" style="position: relative; float: left;">
+  <a href="https://elinsanocapo.github.io/cha-p0/projects/cars-simulator/index.html">
+    <img class="ImageForGame"  data-src="https://ruralanemone.github.io/3kh0/projects/cars-simulator/splash.png" alt="game">
+    <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;  top: 13% !important; color: rgba(255, 255, 255, 0.827) !important;">cars-simulator</div>
+  </a>
+</div>   
+    
+<div class="box" id="Super Mario 64" style="position: relative; float: left;">
+  <a href="https://elinsanocapo.github.io/cha-p0/projects/stack/index.html">
+    <img class="ImageForGame"  data-src="https://play-lh.googleusercontent.com/WRlGQXa9Pav7YZPW-P5X8PAga0lF2T1BAzmasxB9qV_1_om5DgmMbxOFo2SK8ZN5K5k" alt="game">
+    <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;  top: 13% !important; color: rgba(255, 255, 255, 0.827) !important;">stack</div>
+  </a>
+</div>       
+
+<div class="box" id="Super Mario 64" style="position: relative; float: left;">
+  <a href="https://elinsanocapo.github.io/cha-p0/projects/fancypantsadventures/index.html">
+    <img class="ImageForGame"  data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2AtskweZ6CDTEkD6LcJI28q1VGm0baot50PF7uMnxbaqb-B9XLMI_ZAIgPR0KLhpkZSs&usqp=CAU" alt="game">
+    <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;  top: 13% !important; color: rgba(255, 255, 255, 0.827) !important;">fancy</div>
+  </a>
+</div>       
+
+<div class="box" id="Super Mario 64" style="position: relative; float: left;">
+  <a href="https://elinsanocapo.github.io/cha-p0/projects/fireboywatergirlforesttemple/index.html">
+    <img class="ImageForGame"  data-src="https://tcf.admeen.org/category/3000/2944/400x400/fire-and-water.jpg" alt="game">
+    <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;  top: 13% !important; color: rgba(255, 255, 255, 0.827) !important;">Agua y Fuego 1</div>
+  </a>
+</div>       
+
+<div class="box" id="Super Mario 64" style="position: relative; float: left;">
+  <a href="https://elinsanocapo.github.io/cha-p0/projects/flappy-bird/">
+    <img class="ImageForGame"  data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnfzEe3HyHmfYUuITVdAg-6W7QfvQ84pLHX9FLoixV99UkRgKk8IjNEYVABx_GxF4TL0A&usqp=CAU" alt="game">
+    <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;  top: 13% !important; color: rgba(255, 255, 255, 0.827) !important;">flappybird</div>
+  </a>
+</div>       
+
+<div class="box" id="Super Mario 64" style="position: relative; float: left;">
+  <a href="./lbannana-assets/flash/index.html?swf=hobo.swf">
+    <img class="ImageForGame"  data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmrpEUiiusSwtUqy6ZSOQqhcp7HZoT1VlL-sy_8uv5WClUUpjyVFg9n9Mq8AGGduxKZNo&usqp=CAU" alt="game">
+    <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;  top: 13% !important; color: rgba(255, 255, 255, 0.827) !important;">HOBO</div>
+  </a>
+</div>       
+
+<div class="box" id="Super Mario 64" style="position: relative; float: left;">
+  <a href="./lbannana-assets/flash/index.html?swf=hobo6.swf">
+    <img class="ImageForGame"  data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSY-gqOoo0xAYfDJjWTLwBDG9E73uP-lL6MSVgf0YM0x5-LyMMdafQa-1Sfwl0f4EvRDPQ&usqp=CAU" alt="game">
+    <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;  top: 13% !important; color: rgba(255, 255, 255, 0.827) !important;">HOBO 666</div>
+  </a>
+</div>       
+
+<div class="box" id="Super Mario 64" style="position: relative; float: left;">
+  <a href="http://35.158.218.205/experiments/webDOOM/">
+    <img class="ImageForGame"  data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQc7fCAxyGl-Ck7KOKKcMPhYDUGz69_4LJxPIwu99bSRad7wmUodydNxp0Pk3F2bD8Wgys&usqp=CAU" alt="game">
+    <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;  top: 13% !important; color: rgba(255, 255, 255, 0.827) !important;">Doom</div>
+  </a>
+</div>       
+
+    
+
+    <div class="box" id="Super Mario 64" style="position: relative; float: left;">
+  <a href="./Games/Temple-run2/">
+    <img class="ImageForGame"  data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxoQrQZLakqh-EGNTP_dqnT17mvIo-vKqztAz4QLWhptv1b0Ns_XWUb4MoWKgCNxqWOwU&usqp=CAU" alt="game">
+    <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;  top: 13% !important; color: rgba(255, 255, 255, 0.827) !important;">Temple-run</div>
+  </a>
+</div>       
+
+     <div class="box" id="Super Mario 64" style="position: relative; float: left;">
+  <a href="https://elinsanocapo.github.io/cha-p0/projects/motox3m/index.html">
+    <img class="ImageForGame"  data-src="https://a.silvergames.com/j/b/moto-x3m.jpg" alt="game">
+    <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;  top: 13% !important; color: rgba(255, 255, 255, 0.827) !important;">motox3m</div>
+  </a>
+</div>       
+
+     <div class="box" id="Super Mario 64" style="position: relative; float: left;">
+  <a href="https://elinsanocapo.github.io/cha-p0/projects/motox3m2/index.html">
+    <img class="ImageForGame"  data-src="https://skribblio.online/upload/imgs/moto-x3m-2.jpg" alt="game">
+    <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;  top: 13% !important; color: rgba(255, 255, 255, 0.827) !important;">motox3m2</div>
+  </a>
+</div>   
+         <div class="box" id="Super Mario 64" style="position: relative; float: left;">
+  <a href="https://elinsanocapo.github.io/cha-p0/projects/motox3m-pool/index.html">
+    <img class="ImageForGame"  data-src="https://a.silvergames.com/j/b/moto-x3m-5-pool-party.jpg" alt="game">
+    <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;  top: 13% !important; color: rgba(255, 255, 255, 0.827) !important;">motox3m-pool</div>
+  </a>
+</div>   
+    <div class="box" id="Super Mario 64" style="position: relative; float: left;">
+  <a href="https://elinsanocapo.github.io/cha-p0/projects/motox3m-spooky/index.html">
+    <img class="ImageForGame"  data-src="https://www.cokitos.com/wp-content/uploads/2023/08/moto-x3m-halloween.jpeg" alt="game">
+    <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;  top: 13% !important; color: rgba(255, 255, 255, 0.827) !important;">motox3m-spooky</div>
+  </a>
+</div>  
+   <div class="box" id="Super Mario 64" style="position: relative; float: left;">
+  <a href="https://elinsanocapo.github.io/cha-p0/projects/motox3m-winter/index.html">
+    <img class="ImageForGame"  data-src="https://www.cokitos.com/wp-content/uploads/2023/08/moto-x3m-halloween.jpeg" alt="game">
+    <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;  top: 13% !important; color: rgba(255, 255, 255, 0.827) !important;">motox3m-winter</div>
+  </a>
+</div> 
+   <div class="box" id="Super Mario 64" style="position: relative; float: left;">
+  <a href="https://elinsanocapo.github.io/cha-p0/projects/bad-ice-cream/index.html">
+    <img class="ImageForGame"  data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJeXY_0Peh18TjuVTIReebinWHp4k7LB6NXA&s" alt="game">
+    <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;  top: 13% !important; color: rgba(255, 255, 255, 0.827) !important;">bad-ice-cream</div>
+  </a>
+</div> 
+   <div class="box" id="Super Mario 64" style="position: relative; float: left;">
+  <a href="https://elinsanocapo.github.io/cha-p0/projects/bad-ice-cream-2/index.html">
+    <img class="ImageForGame"  data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSU6e62OvryVPwYrlEVU5z8AjKce7lHaKMEOg&s" alt="game">
+    <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;  top: 13% !important; color: rgba(255, 255, 255, 0.827) !important;">bad-ice-cream-2</div>
+  </a>
+</div> 
+ <div class="box" id="Super Mario 64" style="position: relative; float: left;">
+  <a href="https://elinsanocapo.github.io/cha-p0/projects/bad-ice-cream-3/index.html">
+    <img class="ImageForGame"  data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2cbQHJECTsWoWiXULwS-iLkiAm3A4K0RNXA&s" alt="game">
+    <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;  top: 13% !important; color: rgba(255, 255, 255, 0.827) !important;">bad-ice-cream-3</div>
+  </a>
+</div> 
+ <div class="box" id="Super Mario 64" style="position: relative; float: left;">
+  <a href="https://elinsanocapo.github.io/cha-p0/projects/ctr/index.html">
+    <img class="ImageForGame"  data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKhZxUKP9Da7FoPB5vI18rhewKWt62BOfK0A&s" alt="game">
+    <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;  top: 13% !important; color: rgba(255, 255, 255, 0.827) !important;">cute the Rope</div>
+  </a>
+</div> 
+ <div class="box" id="Super Mario 64" style="position: relative; float: left;">
+  <a href="https://elinsanocapo.github.io/cha-p0/projects/ctr-holiday/index.html">
+    <img class="ImageForGame"  data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtC4k859xoo0foDUq9VgRRGoFnPnYIXdZUdejTvGuTiXJ_JkpMdOdBQIXIRiIgwHgP5NQ&usqp=CAU" alt="game">
+    <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;  top: 13% !important; color: rgba(255, 255, 255, 0.827) !important;">cute the Rope 2</div>
+  </a>
+</div> 
+ <div class="box" id="Super Mario 64" style="position: relative; float: left;">
+  <a href="https://elinsanocapo.github.io/cha-p0/projects/ctr-tr/index.html">
+    <img class="ImageForGame"  data-src="https://static.wikia.nocookie.net/66718a99-8fe2-44e5-9a71-fea48fc961a1/scale-to-width/755" alt="game">
+    <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;  top: 13% !important; color: rgba(255, 255, 255, 0.827) !important;">cute the Rope 3</div>
+  </a>
+
+</div> 
+ <div class="box" id="Super Mario 64" style="position: relative; float: left;">
+  <a href="https://elinsanocapo.github.io/cha-p0/projects/subway-surfers-ny/index.html">
+    <img class="ImageForGame"  data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4Y3DEEGkZ-xGQWVxs8RNqfNKutpXD4ErnKA&s" alt="game">
+    <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;  top: 13% !important; color: rgba(255, 255, 255, 0.827) !important;">subway-NewYork 2</div>
+  </a>
+
+</div> 
+ <div class="box" id="Super Mario 64" style="position: relative; float: left;">
+  <a href="https://elinsanocapo.github.io/cha-p0/projects/worlds-hardest-game/index.html">
+    <img class="ImageForGame"  data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUa4jhmULsqFnijxOokl-MSsnJrhV1IZIbWlATVHwYA6Ft7LuVJysgojhL69YUSw4yyq8&usqp=CAU" alt="game">
+    <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;  top: 13% !important; color: rgba(255, 255, 255, 0.827) !important;">worlds-hardest</div>
+  </a>
+
+</div> 
+ <div class="box" id="Super Mario 64" style="position: relative; float: left;">
+  <a href="https://elinsanocapo.github.io/cha-p0/projects/worlds-hardest-game-2/index.html">
+    <img class="ImageForGame"  data-src="https://1games.io/data/image/game/the-world-hardest-game-2-2.jpg" alt="game">
+    <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;  top: 13% !important; color: rgba(255, 255, 255, 0.827) !important;">worlds-hardest2</div>
+  </a>
+
+</div> 
+ <div class="box" id="Super Mario 64" style="position: relative; float: left;">
+  <a href="http://awaystudios.com/projects/poki/nitrome/twin-shot_sdk.html">
+    <img class="ImageForGame"  data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoXTJ9cmXT7c5mLfsvNdkftXSGZ0NS8ga8nmQ1W1I_583nkmm3pkCc1Gyx8NFYf5tYRrc&usqp=CAU" alt="game">
+    <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;  top: 13% !important; color: rgba(255, 255, 255, 0.827) !important;">twin-shot</div>
+  </a>
+
+</div> 
+ <div class="box" id="Super Mario 64" style="position: relative; float: left;">
+  <a href="http://awaystudios.com/projects/poki/nitrome/twin-shot-2.html">
+    <img class="ImageForGame"  data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV8f9cMz1GPaIRU1hsKgEeU_J20uBU6nMqMZSKn-kVxuXAarpcsAQtp42RsL0ozHSwlYc&usqp=CAU" alt="game">
+    <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;  top: 13% !important; color: rgba(255, 255, 255, 0.827) !important;">twin-shot-2</div>
+  </a>
+
+</div> 
+ <div class="box" id="Super Mario 64" style="position: relative; float: left;">
+  <a href="https://bitlifeonline.github.io/class12523/death-chase/">
+    <img class="ImageForGame"  data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwbboYvTDzLHrjzl5Bn9b0hIzjxU0jAJYCyrjF9tB1gkfqS55c1YjHNmYorW8XM_MniDE&usqp=CAU" alt="game">
+    <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;  top: 13% !important; color: rgba(255, 255, 255, 0.827) !important;">death-chase</div>
+  </a>
+
+</div> 
+ <div class="box" id="Super Mario 64" style="position: relative; float: left;">
+  <a href="https://classroomjq.github.io/class276223/hammer-2-reloaded/">
+    <img class="ImageForGame"  data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY5b4-HE6K1MZEm0yvEk45RuTpHTa4dLM6rA&usqp=CAU" alt="game">
+    <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;  top: 13% !important; color: rgba(255, 255, 255, 0.827) !important;">hammer-2</div>
+  </a>
+
+</div> 
+ <div class="box" id="Super Mario 64" style="position: relative; float: left;">
+  <a href="https://bitlifeonline.github.io/class2623/time-shooter-2/">
+    <img class="ImageForGame"  data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQz8mAHVjG-k-4Nru3OkRxEaoXlZM5GuZoZ7g&usqp=CAU" alt="game">
+    <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;  top: 13% !important; color: rgba(255, 255, 255, 0.827) !important;">time-shooter-2</div>
+  </a>
+
+
+
+</div> 
+ <div class="box" id="Super Mario 64" style="position: relative; float: left;">
+  <a href="https://classroomjq.github.io/class276223/winter-clash-3d/">
+    <img class="ImageForGame"  data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs2sU0LqZ8h_4q212GLdP8hU4QqOzVYXVXBMt7jJMMbrOgScoFL5daBcFSZKlzLMk5wsc&usqp=CAU" alt="game">
+    <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;  top: 13% !important; color: rgba(255, 255, 255, 0.827) !important;">winter-clash-3d</div>
+  </a>
+
+</div> 
+ <div class="box" id="Super Mario 64" style="position: relative; float: left;">
+  <a href="https://ubg77.github.io/edit/burnout-drift-hilltop/">
+    <img class="ImageForGame"  data-src="https://cdn-1.webcatalog.io/catalog/poki-burnout-drift-hilltop/poki-burnout-drift-hilltop-icon-filled-256.png?v=1674455850355" alt="game">
+    <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;  top: 13% !important; color: rgba(255, 255, 255, 0.827) !important;">burnout-drift</div>
+  </a>
+
+</div> 
+ <div class="box" id="Super Mario 64" style="position: relative; float: left;">
+  <a href="https://ubg77.github.io/edit/highway-racer-3d/">
+    <img class="ImageForGame"  data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM7Jafme56eTbcNvc0rajBxwuhRlkmUHlmVg&usqp=CAU" alt="game">
+    <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;  top: 13% !important; color: rgba(255, 255, 255, 0.827) !important;">highway-racer-3d</div>
+  </a>
+
+</div> 
+ <div class="box" id="Super Mario 64" style="position: relative; float: left;">
+  <a href="https://classroomjq.github.io/holeio/">
+    <img class="ImageForGame"  data-src="https://classroomjq.github.io/holeio/logo.png" alt="game">
+    <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;  top: 13% !important; color: rgba(255, 255, 255, 0.827) !important;">holeio</div>
+  </a>
+
+</div> 
+ <div class="box" id="Super Mario 64" style="position: relative; float: left;">
+  <a href="https://classroomjq.github.io/kix-dream-soccer/">
+    <img class="ImageForGame"  data-src="https://classroomjq.github.io/kix-dream-soccer/logo.png" alt="game">
+    <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;  top: 13% !important; color: rgba(255, 255, 255, 0.827) !important;">kix-dream-soccer</div>
+  </a>
+
+
+</div> 
+ <div class="box" id="Super Mario 64" style="position: relative; float: left;">
+  <a href="https://bitlifeonline.github.io/class12523/rio-rex/">
+    <img class="ImageForGame"  data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStEmaWfUhUSWriWUzlgnNVX7gr6R6fkxtiStUW80V3VdmpFrZArLzfl-rUcMFUnTpo-lk&usqp=CAU" alt="game">
+    <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;  top: 13% !important; color: rgba(255, 255, 255, 0.827) !important;">rio-rex</div>
+  </a>
+     
+</div> 
+ <div class="box" id="Super Mario 64" style="position: relative; float: left;">
+  <a href="https://classroomjq.github.io/stickman-climb/">
+    <img class="ImageForGame"  data-src="https://classroomjq.github.io/stickman-climb/logo.png" alt="game">
+    <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;  top: 13% !important; color: rgba(255, 255, 255, 0.827) !important;">stickman-climb</div>
+  </a>
+     
+</div> 
+ <div class="box" id="Super Mario 64" style="position: relative; float: left;">
+  <a href="https://ubg77.github.io/stickman-climb-2/">
+    <img class="ImageForGame"  data-src="https://ubg77.github.io/stickman-climb-2/logo.png" alt="game">
+    <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;  top: 13% !important; color: rgba(255, 255, 255, 0.827) !important;">stickman-climb-2</div>
+  </a>
+
+</div> 
+ <div class="box" id="Super Mario 64" style="position: relative; float: left;">
+  <a href="https://classroomjq.github.io/fps-assault-shooter/">
+    <img class="ImageForGame"  data-src="https://classroomjq.github.io/fps-assault-shooter/logo.png" alt="game">
+    <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;  top: 13% !important; color: rgba(255, 255, 255, 0.827) !important;">fps-assault</div>
+  </a>
+
+</div> 
+ <div class="box" id="Super Mario 64" style="position: relative; float: left;">
+  <a href="https://rebemanae.github.io/penalty-shooters-2/">
+    <img class="ImageForGame"  data-src="https://rebemanae.github.io/penalty-shooters-2/logo.png" alt="game">
+    <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;  top: 13% !important; color: rgba(255, 255, 255, 0.827) !important;">penalty-shooters</div>
+  </a>
+
+</div> 
+ <div class="box" id="Super Mario 64" style="position: relative; float: left;">
+  <a href="https://classroomjq.github.io/moto-maniac-2/">
+    <img class="ImageForGame"  data-src="https://classroomjq.github.io/moto-maniac-2/logo.png" alt="game">
+    <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;  top: 13% !important; color: rgba(255, 255, 255, 0.827) !important;">moto-maniac-2</div>
+  </a>
+
+ </div> 
+ <div class="box" id="Super Mario 64" style="position: relative; float: left;">
+  <a href="https://classroomjq.github.io/the-sniper-code/">
+    <img class="ImageForGame"  data-src="https://classroomjq.github.io/the-sniper-code/logo.png" alt="game">
+    <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;  top: 13% !important; color: rgba(255, 255, 255, 0.827) !important;">the-sniper-code</div>
+  </a>
+
+ </div> 
+ <div class="box" id="Super Mario 64" style="position: relative; float: left;">
+  <a href="./lbannana-assets/flash/index.html?swf=WolverineX.swf">
+    <img class="ImageForGame"  data-src="https://files.gameshero.com/game/9ac/0f2/9ac0f258a354ff02/images/240/wolvenireandthexmanmrdescape.jpg" alt="game">
+    <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;  top: 13% !important; color: rgba(255, 255, 255, 0.827) !important;">WolverineX</div>
+  </a>
+
+ </div> 
+ <div class="box" id="Super Mario 64" style="position: relative; float: left;">
+  <a href="./lbannana-assets/flash/index.html?swf=SnailBob.swf">
+    <img class="ImageForGame"  data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS10SeYdDFaEU_5mzMmMhPCCjcxBtPXXAwD9K8wfSw8_A2p7Q8PuFlbVraMqE1Lq-1OLcA&usqp=CAU" alt="game">
+    <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;  top: 13% !important; color: rgba(255, 255, 255, 0.827) !important;">SnailBob</div>
+  </a>
+    
+ </div> 
+ <div class="box" id="Super Mario 64" style="position: relative; float: left;">
+  <a href="./lbannana-assets/flash/index.html?swf=snailbob2.swf">
+    <img class="ImageForGame"  data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTc1gLUdr1MciFIkm8oWvqKrH9fsNKm7Sihq01e9iEbhH0tMvBq8GE_-FJ3YNoZ_2S9K5Q&usqp=CAU" alt="game">
+    <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;  top: 13% !important; color: rgba(255, 255, 255, 0.827) !important;">SnailBob2</div>
+  </a>
+    
+</div> 
+ <div class="box" id="Super Mario 64" style="position: relative; float: left;">
+  <a href="./lbannana-assets/flash/index.html?swf=snailbob4.swf">
+    <img class="ImageForGame"  data-src="https://yepicdn.com/system/static/thumbs/tile_thumb/1363/thumb150_snail-bob-4-space.jpg?1492006484" alt="game">
+    <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;  top: 13% !important; color: rgba(255, 255, 255, 0.827) !important;">SnailBob-Espace</div>
+  </a>
+
+</div> 
+ <div class="box" id="Super Mario 64" style="position: relative; float: left;">
+  <a href="./lbannana-assets/flash/index.html?swf=SnailBob5.swf">
+    <img class="ImageForGame"  data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSR906MD4f5HCfyanz_D0LVLWdKiy0ggCCSEQ&usqp=CAU" alt="game">
+    <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;  top: 13% !important; color: rgba(255, 255, 255, 0.827) !important;">SnailBob5</div>
+  </a>
+
+</div> 
+ <div class="box" id="Super Mario 64" style="position: relative; float: left;">
+  <a href="./lbannana-assets/flash/index.html?swf=SnailBob6.swf">
+    <img class="ImageForGame"  data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdFsLZM8C1KthRmYWCjxGx1dOBVoOueFVZtkYb7dc6rgFmaepWqFzpS1zEcstbQRB-1rM&usqp=CAU" alt="game">
+    <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;  top: 13% !important; color: rgba(255, 255, 255, 0.827) !important;">SnailBob6</div>
+  </a>
+
+</div> 
+ <div class="box" id="Super Mario 64" style="position: relative; float: left;">
+  <a href="./lbannana-assets/flash/index.html?swf=intrusion.swf">
+    <img class="ImageForGame"  data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNXx6zTLLHtTrE6FtQQloXpa3QEx8aT3qing&usqp=CAU" alt="game">
+    <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db;  top: 13% !important; color: rgba(255, 255, 255, 0.827) !important;">intrusion</div>
+  </a>
+
+
+<section class="sticky">
+  <div class="star">
+      <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+  </div>
+
+<script>
+  const container = document.getElementById('games');
+const boxes = document.querySelectorAll('.box');
+
+// Check if an element is in the viewport
+function isElementInViewport(element) {
+  const rect = element.getBoundingClientRect();
+  return (
+
+rect.left >= 0 &&
+rect.bottom <= (window.innerHeight + 400 || document.documentElement.clientHeight) &&
+rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+);
+}
+
+// Function to handle scroll event
+function handleScroll() {
+  const hiddenDivs = document.querySelectorAll('.box');
+  const lazyImages = document.querySelectorAll('.ImageForGame');
+
+lazyImages.forEach(image => {
+    if (isElementInViewport(image) && !image.src) {
+      image.src = image.getAttribute('data-src');
+      image.onload = function() {
+
+    image.classList.add('showIMG');
+
+    console.log('Loaded Game')
+  };
+}
+});
+
+hiddenDivs.forEach(div => {
+    if (isElementInViewport(div)) {
+      div.classList.add('show');
+      console.log('Loaded Game')
+    }
+  });
+}
+var preloaded = false
+function searchHandleLoad() {
+  const hiddenDivs = document.querySelectorAll('.box');
+  const lazyImages = document.querySelectorAll('.ImageForGame');
+  if(preloaded===false) {
+  lazyImages.forEach(image => {
+
+  image.src = image.getAttribute('data-src');
+  image.onload = function() {
+    image.classList.add('showIMG');
+
+  }
+});
+  hiddenDivs.forEach(div => {
+
+  div.classList.add('show');
+});
+  console.log('Loaded')
+  preloaded = true
+} else if (preloaded===true) {
+  console.log('Already Loaded')
+}
+}
+
+// Attach scroll event listener
+window.addEventListener('scroll', handleScroll);
+
+document.addEventListener('DOMContentLoaded', handleScroll);
+
+// Trigger initial check on page load
+handleScroll();
+
+var input, filter, elements, element, i;
+  input = document.getElementById("SearchBox");
+  filter = input.value.toUpperCase();
+  elements = document.getElementById("games");
+  element = elements.getElementsByTagName("div");
+
+function Search() {
+    filter = input.value.toUpperCase();
+     input.addEventListener("input", function() {
+      if (input.value.length > 0) {
+        for (i = 0; i < element.length; i++) {
+          var id = element[i].getAttribute("id");
+          if (id && id.toUpperCase().indexOf(filter) > -1) {
+            element[i].style.display = "";
+
+        searchHandleLoad()
+
+
+      } else {
+        element[i].style.display = "none";
+      }
+    }
+  } else {
+    for (var i = 0; i < element.length; i++) {
+
+      element[i].style.display = "block";
+
+    }
+
+  }
+});
+}
+var usingLoad = false
+
+function loadGame() {
+  if(usingLoad===true){
+
+}
+}
+
+
+</script>
+
+</script>
+</html>
+  
+        
 </body>
 
 </html>
