@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,25 +5,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <title>For students-Enter a Quizizz code</title>
-<link rel="icon" type="image/png" href="https://cf.quizizz.com/img/quizizz_logos/q-logo-icon.png">
+    <title>For students-Enter a Quizizz code</title>
+    <link rel="icon" type="image/png" href="https://cf.quizizz.com/img/quizizz_logos/q-logo-icon.png">
     <meta name="theme-color" content="#000000" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="language" content="English" />
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    
+
     <style>
         .container {
             position: relative;
         }
 
         .center-image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* Ajusta esto a la altura deseada */
-}
-        
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            /* Ajusta esto a la altura deseada */
+        }
+
         .brillante {
             color: white;
             text-shadow: 0 0 10px white;
@@ -34,261 +34,129 @@
             transform: translate(-50%, -50%);
             z-index: 1;
         }
-          iframe {
+
+        iframe {
             width: 100vw;
             height: 100vh;
-            border: none; /* Esto quita el borde del iframe */
+            border: none;
+            /* Esto quita el borde del iframe */
         }
+
         :root {
-  --bg: #19191a;
-  --font: "Montserrat", sans-serif;
-  --color-1: #3a027e;
-  --color-2: #c800ff;
-  --border-card: rgba(49, 49, 49, 1);
-  --card-background: rgb(83, 77, 77);
-  --accent: #8b3dff;
-}
+            --bg: #19191a;
+            --font: "Montserrat", sans-serif;
+            --color-1: #3a027e;
+            --color-2: #c800ff;
+            --border-card: rgba(49, 49, 49, 1);
+            --card-background: rgb(83, 77, 77);
+            --accent: #8b3dff;
+        }
 
-/* ---- reset ---- */
-body {
-  font: normal 78% Arial, Helvetica, sans-serif;
-}
+        /* ---- reset ---- */
+        body {
+            font: normal 78% Arial, Helvetica, sans-serif;
+        }
 
-#logo img {
-  width: 70px; /* Ajusta el tamaño del logo según tus necesidades */
-}
+        #logo img {
+            width: 70px;
+            /* Ajusta el tamaño del logo según tus necesidades */
+        }
 
-.sidebar {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  width: 100%;
-  height: 80px;
-  z-index: 1;
-  border-radius: 15px;
-  background: rgba(105, 131, 118, 0.1);
-  backdrop-filter: blur(7px);
-  -webkit-backdrop-filter: blur(8px);
-  -moz-backdrop-filter: blur(8px);
-  -ms-backdrop-filter: blur(8px);
-  -webkit-box-shadow: 0 0 50px -5px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0 0 50px -5px rgba(0, 0, 0, 0.75);
-  box-shadow: 0 0 50px -5px rgba(0, 0, 0, 0.75);
-  border: 1px solid rgba(0, 0, 0, 0.2);
-}
+        .sidebar {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: 100%;
+            height: 80px;
+            z-index: 1;
+            border-radius: 15px;
+            background: rgba(105, 131, 118, 0.1);
+            backdrop-filter: blur(7px);
+            -webkit-backdrop-filter: blur(8px);
+            -moz-backdrop-filter: blur(8px);
+            -ms-backdrop-filter: blur(8px);
+            -webkit-box-shadow: 0 0 50px -5px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 0 0 50px -5px rgba(0, 0, 0, 0.75);
+            box-shadow: 0 0 50px -5px rgba(0, 0, 0, 0.75);
+            border: 1px solid rgba(0, 0, 0, 0.2);
+        }
 
-.sidebar a {
-  color: #fff;
-  padding: 13px;
-  text-decoration: none;
-  box-sizing: border-box;
-  font-family: "Lato", sans-serif;
-  transition: all 0.5s ease;
-  z-index: 1;
-}
+        .sidebar a {
+            color: #fff;
+            padding: 13px;
+            text-decoration: none;
+            box-sizing: border-box;
+            font-family: "Lato", sans-serif;
+            transition: all 0.5s ease;
+            z-index: 1;
+        }
 
-.sidebar a.active {
-  color: #ffffff;
-  background: #a772ff;
-  border-radius: 10px;
-  z-index: 1;
-}
+        .sidebar a.active {
+            color: #ffffff;
+            background: #a772ff;
+            border-radius: 10px;
+            z-index: 1;
+        }
 
-.sidebar a span {
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  z-index: 1;
-}
+        .sidebar a span {
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            z-index: 1;
+        }
 
-html,
-body {
-  width: 100%;
-  height: 100%;
-  background-color: #0b0b0b;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            background-color: #0b0b0b;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
 
-/* SEARCH */
+        /* SEARCH */
 
-iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-}
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
 
-.nav-active {
-  position: relative;
-  border: none;
-  border-radius: 3px;
-  padding: 10px 20px;
-  background-color: transparent;
-  color: #ffffff;
-  cursor: pointer;
-  text-decoration: none;
-}
+        .nav-active {
+            position: relative;
+            border: none;
+            border-radius: 3px;
+            padding: 10px 20px;
+            background-color: transparent;
+            color: #ffffff;
+            cursor: pointer;
+            text-decoration: none;
+        }
 
-.nav-active::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 0;
-  width: 50%;
-  height: 2px;
-  background-color: #fff;
-}
+        .nav-active::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0;
+            width: 50%;
+            height: 2px;
+            background-color: #fff;
+        }
 
-.nav-active:hover {
-  background-color: #fff;
-}
+        .nav-active:hover {
+            background-color: #fff;
+        }
 
-.nav-btn:hover {
-  background-color: #302f2f;
-}
+        .nav-btn:hover {
+            background-color: #302f2f;
+        }
 
-a {
-  margin-right: 10px;
-}
+        a {
+            margin-right: 10px;
+        }
 
-    </style>
-</head>
-
-<body>
-    <div class="sidebar">
-    <a href="/" id="">
-        <img src="" alt="">
-    </a>
-
-        <a href="./index.html" class="nav-btn"><span>Home</span></a>
-        <a href="./Games.html" class="nav-btn"><span>Games</span></a>
-        <a href="./tube.html" class="nav-active"><span>tube</span></a>
-        <a href="./Chat.html" class="nav-btn"><span>Chat</span></a>
-    </div>
-    <style>
- 
- @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap');
-@import url('/assets/fonts/fa.css');
-
-* {
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    background: #161515;
-    color: #FFF;
-    font-family: Roboto, sans-serif;
-    font-weight: 400;
-    text-align: center;
-}
-
-h1, h2 {
-    font-weight: 400;
-}
-
-.wrapper {
-    width: 100%;
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    top: 54%;
-    transform: translateY(-50%);
-}
-
-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 5px 0;
-    width: 900px;
-    padding: 0 25px;
-    background: transparent;
-}
-
-html, body {
-    overflow: hidden;
-    height: 100%;
-}
-
-
-
-#intro {
-    font-size: 35px;
-    height: 50px;
-    color: red;
-}
-
-#github, #github:active, #github:hover {
-    height: 50px;
-    width: 205px;
-    font-size: 119px;
-    display: block;
-    text-align: center;
-    color: transparent;
-    text-decoration: none;
-}
-
-.container {
-    width: 868px;
-    background: transparent;
-    padding: 315px;
-    margin: 0 auto;
-    text-align: left;
-}
-
-.form {
-    display: inline-block;
-    max-width: 100%;
-    border: 2px solid #FFF;
-    border-radius: 21px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-    text-align: left;
-    padding: 0 10px;
-}
-
-.form input {
-    width: calc(100% - 64px);
-    height: 43px;
-    color: #FFF;
-    padding: 0 5px;
-    background: none;
-    font-size: 14px;
-    border-radius: 2px;
-    border: solid 1px rgba(255, 255, 255, 0.2);
-}
-
-.form button {
-    width: 60px;
-    height: 50px;
-    color: #FFF;
-    background: none;
-    border: none;
-    outline: none;
-}
-
-.search-button {
-    position: relative;
-    width: 60px;
-    height: 50px;
-    color: #FFF;
-    padding: 0 5px;
-    font-family: "Roboto", sans-serif;
-    font-size: 14px;
-    background: none;
-    border: solid 1px #FFF;
-    border-radius: 2px;
-}
-
-.fa-search:before {
-    content: "\f002";
-    font-family: FontAwesome;
-}
-body {
+        body {
             margin: 0;
             padding: 0;
             background: #161515;
@@ -303,7 +171,7 @@ body {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            height: 80vh;
             flex-direction: column;
         }
 
@@ -312,7 +180,7 @@ body {
             padding: 15px 30px;
             font-size: 18px;
             color: #FFF;
-            background-color: #3a027e;
+            background-color: #4d4d4d;
             border: none;
             border-radius: 5px;
             cursor: pointer;
@@ -321,20 +189,89 @@ body {
         }
 
         .button:hover {
-            background-color: #8b3dff;
+            background-color: #5e69a9;
+        }
+
+        #iframe_container {
+            display: none;
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        #iframe_container iframe {
+            width: 80%;
+            height: 80%;
+            border: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #nav_bar {
+            width: 100%;
+            height: 40px;
+            background-color: #333;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: white;
+        }
+
+        .nav_buttons {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav_button {
+            padding: 0 10px;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .nav_button:hover {
+            background-color: #555;
+        }
+
+        .descripcion-brillante {
+            margin-top: 20px;
+            font-size: 20px;
+            color: white;
+            text-shadow: 0 0 10px white;
         }
     </style>
 </head>
 
 <body>
+    <div class="sidebar">
+        <a href="/" id="">
+            <img src="" alt="">
+        </a>
+        <a href="./index.html" class="nav-btn"><span>Home</span></a>
+        <a href="./Games.html" class="nav-btn"><span>Games</span></a>
+        <a href="./tube.html" class="nav-active"><span>tube</span></a>
+        <a href="./Chat.html" class="nav-btn"><span>Chat</span></a>
+    </div>
     <div class="center-buttons">
-      
-        <a href="#" onclick="openAsApp('https://elinsano.fun')" class="button">Abrir como aplicación</a>
+        <button class="button" onclick="openPage('https://tube.elinsano.fun/')">Abrir página</button>
+        <button class="button" onclick="openAsApp('https://tube.elinsano.fun/')">Abrir como aplicación</button>
+        <p class="descripcion-brillante">Esta en una web que te permite buscar <br>
+            videos de youtube por su nombre, cuando quieras utlizarlo, necesitas <br>
+            esperar como maximo 1 minuto para que se encienda.</p>
     </div>
 
-    <iframe name="iframe_content" style="display: none;"></iframe>
-
     <script>
+        function openPage(url) {
+            window.location.href = url;
+        }
+
         function openAsApp(url) {
             var width = 800;
             var height = 600;
@@ -344,9 +281,6 @@ body {
             window.open(url, '_blank', 'width=' + width + ', height=' + height + ', left=' + left + ', top=' + top);
         }
     </script>
-
 </body>
 
-</html>
-</main>
 </html>
