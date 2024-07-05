@@ -1,286 +1,306 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>For students-Enter a Quizizz code</title>
-    <link rel="icon" type="image/png" href="https://cf.quizizz.com/img/quizizz_logos/q-logo-icon.png">
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://cf.quizizz.com/img/quizizz_logos/q-logo-icon.png"
+    />
     <meta name="theme-color" content="#000000" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="language" content="English" />
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
     <style>
-        .container {
-            position: relative;
-        }
+      .container {
+        position: relative;
+      }
 
-        .center-image {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            /* Ajusta esto a la altura deseada */
-        }
+      .center-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        /* Ajusta esto a la altura deseada */
+      }
 
-        .brillante {
-            color: white;
-            text-shadow: 0 0 10px white;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 1;
-        }
+      .brillante {
+        color: white;
+        text-shadow: 0 0 10px white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+      }
 
-        iframe {
-            width: 100vw;
-            height: 100vh;
-            border: none;
-            /* Esto quita el borde del iframe */
-        }
+      iframe {
+        width: 100vw;
+        height: 100vh;
+        border: none;
+        /* Esto quita el borde del iframe */
+      }
 
-        :root {
-            --bg: #19191a;
-            --font: "Montserrat", sans-serif;
-            --color-1: #3a027e;
-            --color-2: #c800ff;
-            --border-card: rgba(49, 49, 49, 1);
-            --card-background: rgb(83, 77, 77);
-            --accent: #8b3dff;
-        }
+      :root {
+        --bg: #19191a;
+        --font: "Montserrat", sans-serif;
+        --color-1: #3a027e;
+        --color-2: #c800ff;
+        --border-card: rgba(49, 49, 49, 1);
+        --card-background: rgb(83, 77, 77);
+        --accent: #8b3dff;
+      }
 
-        /* ---- reset ---- */
-        body {
-            font: normal 78% Arial, Helvetica, sans-serif;
-        }
+      /* ---- reset ---- */
+      body {
+        font: normal 78% Arial, Helvetica, sans-serif;
+      }
 
-        #logo img {
-            width: 70px;
-            /* Ajusta el tamaño del logo según tus necesidades */
-        }
+      #logo img {
+        width: 70px;
+        /* Ajusta el tamaño del logo según tus necesidades */
+      }
 
-        .sidebar {
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            width: 100%;
-            height: 80px;
-            z-index: 1;
-            border-radius: 15px;
-            background: rgba(105, 131, 118, 0.1);
-            backdrop-filter: blur(7px);
-            -webkit-backdrop-filter: blur(8px);
-            -moz-backdrop-filter: blur(8px);
-            -ms-backdrop-filter: blur(8px);
-            -webkit-box-shadow: 0 0 50px -5px rgba(0, 0, 0, 0.75);
-            -moz-box-shadow: 0 0 50px -5px rgba(0, 0, 0, 0.75);
-            box-shadow: 0 0 50px -5px rgba(0, 0, 0, 0.75);
-            border: 1px solid rgba(0, 0, 0, 0.2);
-        }
+      .sidebar {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        height: 80px;
+        z-index: 1;
+        border-radius: 15px;
+        background: rgba(105, 131, 118, 0.1);
+        backdrop-filter: blur(7px);
+        -webkit-backdrop-filter: blur(8px);
+        -moz-backdrop-filter: blur(8px);
+        -ms-backdrop-filter: blur(8px);
+        -webkit-box-shadow: 0 0 50px -5px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0 0 50px -5px rgba(0, 0, 0, 0.75);
+        box-shadow: 0 0 50px -5px rgba(0, 0, 0, 0.75);
+        border: 1px solid rgba(0, 0, 0, 0.2);
+      }
 
-        .sidebar a {
-            color: #fff;
-            padding: 13px;
-            text-decoration: none;
-            box-sizing: border-box;
-            font-family: "Lato", sans-serif;
-            transition: all 0.5s ease;
-            z-index: 1;
-        }
+      .sidebar a {
+        color: #fff;
+        padding: 13px;
+        text-decoration: none;
+        box-sizing: border-box;
+        font-family: "Lato", sans-serif;
+        transition: all 0.5s ease;
+        z-index: 1;
+      }
 
-        .sidebar a.active {
-            color: #ffffff;
-            background: #a772ff;
-            border-radius: 10px;
-            z-index: 1;
-        }
+      .sidebar a.active {
+        color: #ffffff;
+        background: #a772ff;
+        border-radius: 10px;
+        z-index: 1;
+      }
 
-        .sidebar a span {
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            z-index: 1;
-        }
+      .sidebar a span {
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        z-index: 1;
+      }
 
-        html,
-        body {
-            width: 100%;
-            height: 100%;
-            background-color: #0b0b0b;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-        }
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        background-color: #0b0b0b;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
 
-        /* SEARCH */
+      /* SEARCH */
 
-        iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
+      iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
 
-        .nav-active {
-            position: relative;
-            border: none;
-            border-radius: 3px;
-            padding: 10px 20px;
-            background-color: transparent;
-            color: #ffffff;
-            cursor: pointer;
-            text-decoration: none;
-        }
+      .nav-active {
+        position: relative;
+        border: none;
+        border-radius: 3px;
+        padding: 10px 20px;
+        background-color: transparent;
+        color: #ffffff;
+        cursor: pointer;
+        text-decoration: none;
+      }
 
-        .nav-active::after {
-            content: "";
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            bottom: 0;
-            width: 50%;
-            height: 2px;
-            background-color: #fff;
-        }
+      .nav-active::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+        width: 50%;
+        height: 2px;
+        background-color: #fff;
+      }
 
-        .nav-active:hover {
-            background-color: #fff;
-        }
+      .nav-active:hover {
+        background-color: #302f2f;
+      }
 
-        .nav-btn:hover {
-            background-color: #302f2f;
-        }
+      .nav-btn:hover {
+        background-color: #302f2f;
+      }
 
-        a {
-            margin-right: 10px;
-        }
+      a {
+        margin-right: 10px;
+      }
 
-        body {
-            margin: 0;
-            padding: 0;
-            background: #161515;
-            color: #FFF;
-            font-family: Roboto, sans-serif;
-            font-weight: 400;
-            text-align: center;
-            overflow: hidden;
-        }
+      body {
+        margin: 0;
+        padding: 0;
+        background: #161515;
+        color: #fff;
+        font-family: Roboto, sans-serif;
+        font-weight: 400;
+        text-align: center;
+        overflow: hidden;
+      }
 
-        .center-buttons {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 80vh;
-            flex-direction: column;
-        }
+      .center-buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+        flex-direction: column;
+      }
 
-        .button {
-            margin: 10px;
-            padding: 15px 30px;
-            font-size: 18px;
-            color: #FFF;
-            background-color: #4d4d4d;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
-        }
+      .button {
+        margin: 10px;
+        padding: 15px 30px;
+        font-size: 18px;
+        color: #fff;
+        background-color: #4d4d4d;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+      }
 
-        .button:hover {
-            background-color: #5e69a9;
-        }
+      .button:hover {
+        background-color: #5e69a9;
+      }
 
-        #iframe_container {
-            display: none;
-            width: 100%;
-            height: 100%;
-            position: fixed;
-            top: 0;
-            left: 0;
-            background: rgba(0, 0, 0, 0.8);
-        }
+      #iframe_container {
+        display: none;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.8);
+      }
 
-        #iframe_container iframe {
-            width: 80%;
-            height: 80%;
-            border: none;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
+      #iframe_container iframe {
+        width: 80%;
+        height: 80%;
+        border: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
 
-        #nav_bar {
-            width: 100%;
-            height: 40px;
-            background-color: #333;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: absolute;
-            top: 0;
-            left: 0;
-            color: white;
-        }
+      #nav_bar {
+        width: 100%;
+        height: 40px;
+        background-color: #333;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: white;
+      }
 
-        .nav_buttons {
-            display: flex;
-            align-items: center;
-        }
+      .nav_buttons {
+        display: flex;
+        align-items: center;
+      }
 
-        .nav_button {
-            padding: 0 10px;
-            cursor: pointer;
-            user-select: none;
-        }
+      .nav_button {
+        padding: 0 10px;
+        cursor: pointer;
+        user-select: none;
+      }
 
-        .nav_button:hover {
-            background-color: #555;
-        }
+      .nav_button:hover {
+        background-color: #555;
+      }
 
-        .descripcion-brillante {
-            margin-top: 20px;
-            font-size: 20px;
-            color: white;
-            text-shadow: 0 0 10px white;
-        }
+      .descripcion-brillante {
+        margin-top: 20px;
+        font-size: 20px;
+        color: white;
+        text-shadow: 0 0 10px white;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="sidebar">
-        <a href="/" id="">
-            <img src="" alt="">
-        </a>
-        <a href="./index.html" class="nav-btn"><span>Home</span></a>
-        <a href="./Games.html" class="nav-btn"><span>Games</span></a>
-        <a href="./tube.html" class="nav-active"><span>tube</span></a>
-        <a href="./Chat.html" class="nav-btn"><span>Chat</span></a>
+      <a href="/" id="">
+        <img src="" alt="" />
+      </a>
+      <a href="./index.html" class="nav-btn"><span>Home</span></a>
+      <a href="./Games.html" class="nav-btn"><span>Games</span></a>
+      <a href="./tube.html" class="nav-active"><span>tube</span></a>
+      <a href="./Chat.html" class="nav-btn"><span>Chat</span></a>
     </div>
     <div class="center-buttons">
-        <button class="button" onclick="openPage('https://tube.elinsano.fun/')">Abrir página</button>
-        <button class="button" onclick="openAsApp('https://tube.elinsano.fun/')">Abrir como aplicación</button>
-        <p class="descripcion-brillante">Esta en una web que te permite buscar <br>
-            videos de youtube por su nombre, cuando quieras utlizarlo, necesitas <br>
-            esperar como maximo 1 minuto para que se encienda.</p>
+      <button class="button" onclick="openPage('https://tube.elinsano.fun/')">
+        Abrir página
+      </button>
+      <button class="button" onclick="openAsApp('https://tube.elinsano.fun/')">
+        Abrir como aplicación
+      </button>
+      <p class="descripcion-brillante">
+        Esta en una web que te permite buscar <br />
+        videos de youtube por su nombre, cuando quieras utlizarlo, necesitas
+        <br />
+        esperar como maximo 1 minuto para que se encienda.
+      </p>
     </div>
 
     <script>
-        function openPage(url) {
-            window.location.href = url;
-        }
+      function openPage(url) {
+        window.location.href = url;
+      }
 
-        function openAsApp(url) {
-            var width = 800;
-            var height = 600;
-            var left = (screen.width - width) / 2;
-            var top = (screen.height - height) / 2;
+      function openAsApp(url) {
+        var width = 800;
+        var height = 600;
+        var left = (screen.width - width) / 2;
+        var top = (screen.height - height) / 2;
 
-            window.open(url, '_blank', 'width=' + width + ', height=' + height + ', left=' + left + ', top=' + top);
-        }
+        window.open(
+          url,
+          "_blank",
+          "width=" +
+            width +
+            ", height=" +
+            height +
+            ", left=" +
+            left +
+            ", top=" +
+            top
+        );
+      }
     </script>
-</body>
-
+  </body>
 </html>
